@@ -8,10 +8,20 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "CarClass",
+"language": "GDScript",
+"path": "res://Car/Car.gd"
+} ]
+_global_script_class_icons={
+"CarClass": ""
+}
+
 [application]
 
 config/name="001-Frogger Game"
-run/main_scene="res://Player/Player.tscn"
+run/main_scene="res://Level/Level.tscn"
 config/icon="res://icon.png"
 
 [gui]
