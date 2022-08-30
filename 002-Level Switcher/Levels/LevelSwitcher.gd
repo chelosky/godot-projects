@@ -25,6 +25,10 @@ func handle_level_changed(current_level_name: String):
 	add_child(next_level)
 	anim.play('fade_in')
 	next_level.connect("level_changed", self, "handle_level_changed")
+	transfer_data_between_level(current_level, next_level)
+
+func transfer_data_between_level(old_level, new_level):
+	new_level.load_level_parameters(old_level.level_parameters)
 
 func _on_AnimationPlayer_animation_finished(anim_name: String):
 	match anim_name:
